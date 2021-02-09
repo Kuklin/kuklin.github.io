@@ -41,6 +41,22 @@ body {
 	bottom: 0;
 }
 /* The above artibute creates a bar under the navigation bar to cover any gaps that might come from having odd screen sizes */
+section {
+    display: grid;
+    grid-template-rows: 1fr 4fr 50px;
+    grid-template-columns: 2fr 6fr;
+    grid-gap: 15px;
+    grid-template-areas: 
+        "h2 h3"
+        "h2 p"
+        ". .";
+    justify-content: center;
+    align-content: center;
+}
+section h2 img {
+    height: auto;
+    width: auto;
+}
 #selector-1, #selector-1 + a {
     left: 0;
 }
@@ -82,12 +98,12 @@ body {
 .panel {
     position: relative;
     width: 100%;
-    height: 100%;
 }
 .content-scroll {
     top: 0;
     left: 0;
-    transition: all 0.6s ease-in-out;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
 
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
@@ -95,6 +111,7 @@ body {
 .panel {
     background: #b8b8b8;
     overflow: hidden;
+    height: 100%;
 }
 #selector-1:checked ~ .content-scroll {
     transform: translateY(0%);
@@ -108,61 +125,64 @@ body {
 #selector-4:checked ~ .content-scroll {
     transform: translateY(-300%);
 }
+.panel h2,
+.panel h3,
+.panel p {
+    border: 3px solid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+	-webkit-backface-visibility: hidden;
+    padding-left: 4px;
+    padding-right: 4px;
+}
 .panel h2 {
     color: #222222;
-	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
-	font-size: 30px;
+/* 	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+ */	font-size: 40pt;
 	font-weight: 900;
-	width: 80%;
-    float: right;
-	-webkit-backface-visibility: hidden;
+    grid-area: h2;
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 100%;
 }
 .panel h3 {
     color: #222222;
-	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
-	position: absolute;
-	font-size: 25px;
+	font-size: 25pt;
 	font-weight: 900;
-	width: 80%;
-	left: 10%;
 	text-align: center;
 	line-height: 50px;
-	margin: -70px 0 0 0;
 	padding: 0;
-	top: 40%;
-	-webkit-backface-visibility: hidden;
-}
-
-/* All of the above will have to be adjusted to taste! */
-#selector-1:checked ~ .content-scroll #tab-1 h2 + h3,
-#selector-2:checked ~ .content-scroll #tab-2 h2 + h3,
-#selector-3:checked ~ .content-scroll #tab-3 h2 + h3,
-#selector-4:checked ~ .content-scroll #tab-4 h2 + h3 {
-    animation: moveDown 0.6s ease-in-out 0.2s backwards;
-}
-@keyframes moveDown {
-    0% {
-        transform: translateY(-40px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+    grid-area: h3;
+    border: 3px solid;
+    font-family: 'Mulish', sans-serif;
 }
 .panel p {
-    position: absolute;
 	text-align: center;
 	font-size: 16px;
 	line-height: 22px;
 	color: #1b1b1b;
 	z-index: 2;
 	padding: 0;
-	width: 50%;
-	left: 25%;
-	top: 50%;
-	margin: 10px 0 0 0;
-	-webkit-backface-visibility: hidden;
+    grid-area: p;
+    border: 3px solid;
+    font-family: 'Overpass', sans-serif;
+}
+/* All of the above will have to be adjusted to taste! */
+#selector-1:checked ~ .content-scroll #tab-1 h2 + h3,
+#selector-2:checked ~ .content-scroll #tab-2 h2 + h3,
+#selector-3:checked ~ .content-scroll #tab-3 h2 + h3,
+#selector-4:checked ~ .content-scroll #tab-4 h2 + h3 {
+    animation: moveDown 0.4s ease-in-out 0.2s backwards;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(-900px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 #selector-1:checked ~ .content-scroll #tab-1 p,
 #selector-2:checked ~ .content-scroll #tab-2 p,
@@ -172,7 +192,7 @@ body {
 }
 @keyframes moveUp {
     0% {
-        transform: translateY(40px);
+        transform: translateY(900px);
         opacity: 0;
     }
     100% {
