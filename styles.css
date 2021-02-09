@@ -57,6 +57,21 @@ body {
 .pageContainer > nav > input:checked:hover + a {
     background: #821134;
 }
+.pageContainer > nav > input:checked + a:after,
+.pageContainer > nav > input:checked:hover + a:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #821134;
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+/* The above adds a little triangle to mark the link you are at. */
 .pageContainer > nav > input:hover + a {
     background: #AD244F;
 }
@@ -125,6 +140,20 @@ body {
         opacity: 1;
     }
 }
+.panelContent p {
+    position: absolute;
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+	color: #8b8b8b;
+	z-index: 2;
+	padding: 0;
+	width: 50%;
+	left: 25%;
+	top: 50%;
+	margin: 10px 0 0 0;
+	-webkit-backface-visibility: hidden;
+}
 #theManSelector:checked ~ .pageContentScroller #theMan p,
 #hisLegacySelector:checked ~ .pageContentScroller #hisLegacy p,
 #findOutMoreSelector:checked ~ .pageContentScroller #findOutMore p,
@@ -144,11 +173,11 @@ body {
 .panelColor {
     background: #fa96b5;
 }
-.panelCOlor h2 {
+.panelColor h2 {
     color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
-.panelCOlor p {
+.panelColor p {
     color: rgba(255,255,255,0.8);
 }
 /* AFTER EVERYTHING WORKS, ADD QUERIES FOR SMALLER SCREENS!!! */
