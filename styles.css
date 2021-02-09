@@ -1,3 +1,154 @@
 body {
     overflow: hidden;
 }
+.pageContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pageContainer > nav > input,
+.pageContainer > nav > a {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+}
+/* Adjust the input and a to fit with needed image */
+.pageContainer > nav > input {
+    opacity: 0;
+    z-index: 1000;
+}
+.pageContainer > nav > a {
+    z-index: 10;
+    font-weight: 700;
+    background: #e23a6e;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: none;
+}
+/* Adjust the above parameters as needed as well */
+.pageContainer:before {
+	content: '';
+	position: fixed;
+	width: 100%;
+	height: 34px;
+	background: #e23a6e;
+	z-index: 9;
+	bottom: 0;
+}
+/* The above artibute creates a bar under the navigation bar to cover any gaps that might come from having odd screen sizes */
+#theMan, #theMan + a {
+    left: 0%;
+}
+#hisLegacy, #hisLegacy + a {
+    left: 25%;
+}
+#findOutMore, #findOutMore + a {
+    left: 50%;
+}
+#aboutPage, #aboutPage + a {
+    left: 75%;
+}
+.pageContainer > nav > input:checked + a,
+.pageContainer > nav > input:checked:hover + a {
+    background: #821134;
+}
+.pageContainer > nav > input:hover + a {
+    background: #AD244F;
+}
+.pageContainer > nav > input:hover + a:after {
+    border-bottom: #AD244F;
+}
+.pageContentScroller,
+.panelContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.pageContentScroller {
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+.panelContent {
+    background: #ffffff;
+    overflow: hidden;
+}
+#theManSelector:checked ~ .pageContentScroller {
+    transform: translateY(0%);
+}
+#hisLegacySelector:checked ~ .pageContentScroller {
+    transform: translateY(-100%);
+}
+#findOutMoreSelector:checked ~ .pageContentScroller {
+    transform: translateY(-200%);
+}
+#aboutPageSelector:checked ~ .pageContentScroller {
+    transform: translateY(-300%);
+}
+.panelContent h2 {
+    color: #e23a6e;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+	position: absolute;
+	font-size: 54px;
+	font-weight: 900;
+	width: 80%;
+	left: 10%;
+	text-align: center;
+	line-height: 50px;
+	margin: -70px 0 0 0;
+	padding: 0;
+	top: 50%;
+	-webkit-backface-visibility: hidden;
+}
+/* All of the above will have to be adjusted to taste! */
+#theManSelector:checked ~ .pageContentScroller #theMan h2,
+#hisLegacySelector:checked ~ .pageContentScroller #hisLegacy h2,
+#findOutMoreSelector:checked ~ .pageContentScroller #findOutMore h2,
+#aboutPageSelector:checked ~ .pageContentScroller #aboutPage h2 {
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes moveDown {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+#theManSelector:checked ~ .pageContentScroller #theMan p,
+#hisLegacySelector:checked ~ .pageContentScroller #hisLegacy p,
+#findOutMoreSelector:checked ~ .pageContentScroller #findOutMore p,
+#aboutPageSelector:checked ~ .pageContentScroller #aboutPage p {
+    animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.panelColor {
+    background: #fa96b5;
+}
+.panelCOlor h2 {
+    color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.panelCOlor p {
+    color: rgba(255,255,255,0.8);
+}
+/* AFTER EVERYTHING WORKS, ADD QUERIES FOR SMALLER SCREENS!!! */
