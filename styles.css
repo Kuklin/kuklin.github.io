@@ -175,7 +175,7 @@ figcaption {
     grid-area: h3;
     font-family: 'Mulish', sans-serif;
 }
-.panel p ul li,
+.panel p a,
 .panel p {
 	text-align: start;
 	font-size: 16px;
@@ -231,7 +231,7 @@ figcaption {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
-.alt-color p ul li,
+.alt-color p a,
 .alt-color p {
     color: #efefef;
 }
