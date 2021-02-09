@@ -28,7 +28,7 @@ body {
     background: #e23a6e;
     color: #ffffff;
     text-align: center;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
 }
 /* Adjust the above parameters as needed as well */
 .pageContainer:before {
@@ -37,20 +37,20 @@ body {
 	width: 100%;
 	height: 34px;
 	background: #e23a6e;
-	z-index: 0;
+	z-index: 9;
 	bottom: 0;
 }
 /* The above artibute creates a bar under the navigation bar to cover any gaps that might come from having odd screen sizes */
-#theMan, #theMan + a {
-    left: 0%;
+#theManSelector, #theManSelector + a {
+    left: 0;
 }
-#hisLegacy, #hisLegacy + a {
+#hisLegacySelector, #hisLegacySelector + a {
     left: 25%;
 }
-#findOutMore, #findOutMore + a {
+#findOutMoreSelector, #findOutMoreSelector + a {
     left: 50%;
 }
-#aboutPage, #aboutPage + a {
+#aboutPageSelector, #aboutPageSelector + a {
     left: 75%;
 }
 .pageContainer > nav > input:checked + a,
