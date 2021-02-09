@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 .container {
     width: 100%;
     height: 100%;
@@ -5,8 +8,8 @@
     top: 0;
     left: 0;
 }
-.container > nav > input,
-.container > nav > a {
+.container > input,
+.container > a {
     position: fixed;
     bottom: 0px;
     width: 25%;
@@ -15,15 +18,15 @@
     line-height: 34px;
 }
 /* Adjust the input and a to fit with needed image */
-.container > nav > input {
+.container > input {
     opacity: 0;
     z-index: 1000;
 }
-.container > nav > a {
+.container > a {
     z-index: 10;
     font-weight: 700;
-    background: #e23a6e;
-    color: #ffffff;
+    background: #A2A2A2;
+    color: #222222;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
 }
@@ -33,7 +36,7 @@
 	position: fixed;
 	width: 100%;
 	height: 34px;
-	background: #e23a6e;
+	background: #5F5F5F;
 	z-index: 9;
 	bottom: 0;
 }
@@ -50,12 +53,12 @@
 #selector-4, #selector-4 + a {
     left: 75%;
 }
-.container > nav > input:checked + a,
-.container > nav > input:checked:hover + a {
-    background: #821134;
+.container > input:checked + a,
+.container > input:checked:hover + a {
+    background: #6b6b6b;
 }
-.container > nav > input:checked + a:after,
-.container > nav > input:checked:hover + a:after {
+.container > input:checked + a:after,
+.container > input:checked:hover + a:after {
     bottom: 100%;
     border: solid transparent;
     content: '';
@@ -63,17 +66,17 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #821134;
+    border-bottom-color: #8b8b8b;
     border-width: 20px;
     left: 50%;
     margin-left: -20px;
 }
 /* The above adds a little triangle to mark the link you are at. */
-.container > nav > input:hover + a {
-    background: #AD244F;
+.container > input:hover + a {
+    background: #8b8b8b;
 }
-.container > nav > input:hover + a:after {
-    border-bottom: #AD244F;
+.container > input:hover + a:after {
+    border-bottom: #8b8b8b;
 }
 .content-scroll,
 .panel {
@@ -90,7 +93,7 @@
     -webkit-backface-visibility: hidden;
 }
 .panel {
-    background: #ffffff;
+    background: #b8b8b8;
     overflow: hidden;
 }
 #selector-1:checked ~ .content-scroll {
@@ -105,11 +108,20 @@
 #selector-4:checked ~ .content-scroll {
     transform: translateY(-300%);
 }
-.panel h2 + h3 {
-    color: #e23a6e;
+.panel h2 {
+    color: #222222;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+	font-size: 30px;
+	font-weight: 900;
+	width: 80%;
+    float: right;
+	-webkit-backface-visibility: hidden;
+}
+.panel h3 {
+    color: #222222;
 	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
 	position: absolute;
-	font-size: 54px;
+	font-size: 25px;
 	font-weight: 900;
 	width: 80%;
 	left: 10%;
@@ -117,9 +129,10 @@
 	line-height: 50px;
 	margin: -70px 0 0 0;
 	padding: 0;
-	top: 50%;
+	top: 40%;
 	-webkit-backface-visibility: hidden;
 }
+
 /* All of the above will have to be adjusted to taste! */
 #selector-1:checked ~ .content-scroll #tab-1 h2 + h3,
 #selector-2:checked ~ .content-scroll #tab-2 h2 + h3,
@@ -142,7 +155,7 @@
 	text-align: center;
 	font-size: 16px;
 	line-height: 22px;
-	color: #8b8b8b;
+	color: #1b1b1b;
 	z-index: 2;
 	padding: 0;
 	width: 50%;
@@ -168,13 +181,18 @@
     }
 }
 .alt-color {
-    background: #fa96b5;
+    background: #5f5f5f;
 }
 .alt-color h2 {
-    color: #fff;
+    color: #efefef;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
+.alt-color h3 {
+    color: #efefef;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
 .alt-color p {
-    color: rgba(255,255,255,0.8);
+    color: #efefef;
 }
 /* AFTER EVERYTHING WORKS, ADD QUERIES FOR SMALLER SCREENS!!! */
