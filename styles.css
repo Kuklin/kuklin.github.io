@@ -28,7 +28,8 @@ body {
     background: #A2A2A2;
     color: #222222;
     text-align: center;
-    text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 18pt;
 }
 /* Adjust the above parameters as needed as well */
 .container:before {
@@ -43,19 +44,38 @@ body {
 /* The above artibute creates a bar under the navigation bar to cover any gaps that might come from having odd screen sizes */
 section {
     display: grid;
-    grid-template-rows: 1fr 4fr 50px;
-    grid-template-columns: 2fr 6fr;
+    grid-template-rows: 10px 1fr 4fr 50px;
+    grid-template-columns: 10px 2fr 6fr 10px;
     grid-gap: 15px;
-    grid-template-areas: 
-        "h2 h3"
-        "h2 p"
-        ". .";
-    justify-content: center;
+    grid-template-areas:
+        ". . . ."
+        ". h2 h3 ."
+        ". h2 p ."
+        ". . . .";
+    justify-content: space-evenly;
     align-content: center;
 }
-section h2 img {
+section h2 div figure img {
     height: auto;
-    width: auto;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+figure {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+figcaption {
+    font-family: 'Overpass', sans-serif;
+    font-size: 8pt;
+    color: rgba(167, 167, 167, 0.5);
+    position: absolute;
+    bottom: 0.1%;
 }
 #selector-1, #selector-1 + a {
     left: 0;
@@ -82,7 +102,7 @@ section h2 img {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #8b8b8b;
+    border-bottom-color: #6b6b6b;
     border-width: 20px;
     left: 50%;
     margin-left: -20px;
@@ -133,17 +153,18 @@ section h2 img {
     width: 100%;
     margin: 0;
 	-webkit-backface-visibility: hidden;
-    padding-left: 4px;
-    padding-right: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: start;
 }
 .panel h2 {
     color: #222222;
-/* 	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
- */	font-size: 40pt;
+ 	font-size: 40pt;
 	font-weight: 900;
     grid-area: h2;
     font-family: 'Didact Gothic', sans-serif;
     line-height: 100%;
+    border: 3px solid;
 }
 .panel h3 {
     color: #222222;
@@ -151,20 +172,18 @@ section h2 img {
 	font-weight: 900;
 	text-align: center;
 	line-height: 50px;
-	padding: 0;
     grid-area: h3;
-    border: 3px solid;
     font-family: 'Mulish', sans-serif;
 }
+.panel p ul li,
 .panel p {
-	text-align: center;
+	text-align: start;
 	font-size: 16px;
 	line-height: 22px;
 	color: #1b1b1b;
 	z-index: 2;
 	padding: 0;
     grid-area: p;
-    border: 3px solid;
     font-family: 'Overpass', sans-serif;
 }
 /* All of the above will have to be adjusted to taste! */
@@ -212,6 +231,7 @@ section h2 img {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
+.alt-color p ul li,
 .alt-color p {
     color: #efefef;
 }
