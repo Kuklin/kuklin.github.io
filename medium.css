@@ -1,0 +1,138 @@
+body {
+    overflow: scroll;
+}
+.container {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container > input,
+.container > a {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+}
+.container > input {
+    display: none;
+    z-index: -5;
+}
+/* Adjust the input and a to fit with needed image */
+.container > a {
+    z-index: 10;
+    font-weight: 700;
+    background: #A2A2A2;
+    color: #222222;
+    text-align: center;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 15pt;
+}
+/* Adjust the above parameters as needed as well */
+.container:before {
+	content: '';
+	position: fixed;
+	width: 100%;
+	height: 34px;
+	background: #5F5F5F;
+	z-index: 9;
+	bottom: 0;
+}
+/* The above artibute creates a bar under the navigation bar to cover any gaps that might come from having odd screen sizes */
+section h2 div figure img {
+    height: auto;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+figure {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+figcaption {
+    font-family: 'Overpass', sans-serif;
+    font-size: 8pt;
+    color: rgba(167, 167, 167, 0.5);
+    position: absolute;
+    bottom: 0.1%;
+}
+#selector-1, #selector-1 + a {
+    left: 0;
+}
+#selector-2, #selector-2 + a {
+    left: 25%;
+}
+#selector-3, #selector-3 + a {
+    left: 50%;
+}
+#selector-4, #selector-4 + a {
+    left: 75%;
+}
+.container > a:hover {
+    background: #8b8b8b;
+}
+.container > input:hover + a:after {
+    border-bottom: #8b8b8b;
+}
+.content-scroll,
+.panel {
+    position: relative;
+    width: 100%;
+}
+.content-scroll {
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+.panel {
+    background: #b8b8b8;
+    overflow: hidden;
+    height: 100%;
+}
+.panel h2 {
+    color: #222222;
+ 	font-size: 28pt;
+	font-weight: 900;
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 100%;
+}
+.panel h3 {
+    color: #222222;
+	font-size: 20pt;
+	font-weight: 900;
+	text-align: center;
+	line-height: 50px;
+    font-family: 'Mulish', sans-serif;
+}
+.panel p a,
+.panel p {
+	text-align: start;
+	font-size: 16pt;
+	line-height: 22px;
+	color: #1b1b1b;
+	z-index: 2;
+	padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+/* All of the above will have to be adjusted to taste! */
+.alt-color {
+    background: #5f5f5f;
+}
+.alt-color h2,
+.alt-color h3,
+.alt-color p a,
+.alt-color p {
+    color: #efefef;
+}
