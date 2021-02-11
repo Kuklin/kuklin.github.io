@@ -170,8 +170,6 @@ figcaption {
 }
 .panel h3 {
 	font-size: 25pt;
-	text-align: center;
-    line-height: -50%;
     grid-area: h3;
     font-family: 'Mulish', sans-serif;
 }
