@@ -1,6 +1,6 @@
 body {
     overflow: auto;
 }
-.pageContainer > nav > input {
+.pageContainer > input {
     display: none;
 }

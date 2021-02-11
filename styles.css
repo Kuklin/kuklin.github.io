@@ -57,6 +57,7 @@ section {
 }
 section h2 div figure img {
     height: auto;
+    width: fit-content;
     max-width: 100%;
     align-self: center;
     justify-self: center;
@@ -132,6 +133,7 @@ figcaption {
     background: #b8b8b8;
     overflow: hidden;
     height: 100%;
+    width: 100%;
 }
 #selector-1:checked ~ .content-scroll {
     transform: translateY(0%);
@@ -148,41 +150,38 @@ figcaption {
 .panel h2,
 .panel h3,
 .panel p {
-    border: 3px solid;
     height: 100%;
     width: 100%;
     margin: 0;
 	-webkit-backface-visibility: hidden;
-    margin-left: auto;
-    margin-right: auto;
     text-align: start;
+    border: 3px solid #222222;
 }
-.panel h2 {
-    color: #222222;
- 	font-size: 40pt;
-	font-weight: 900;
-    grid-area: h2;
-    font-family: 'Didact Gothic', sans-serif;
-    line-height: 100%;
-    border: 3px solid;
-}
+.panel h2,
 .panel h3 {
     color: #222222;
-	font-size: 25pt;
 	font-weight: 900;
+    line-height: 100%;
+}
+.panel h2 {
+ 	font-size: 35pt;
+    grid-area: h2;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.panel h3 {
+	font-size: 25pt;
 	text-align: center;
-	line-height: 50px;
     grid-area: h3;
     font-family: 'Mulish', sans-serif;
 }
 .panel p a,
 .panel p {
+    width: 99%;
 	text-align: start;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 14pt;
 	color: #1b1b1b;
 	z-index: 2;
-	padding: 0;
+	padding: 0 0 0 1%;
     grid-area: p;
     font-family: 'Overpass', sans-serif;
 }
