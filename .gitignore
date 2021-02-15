@@ -1,3 +1,6 @@
-node_modules
-package-lock.json
-package.json
+tribute_page/node_modules
+tribute_page/package-lock.json
+tribute_page/package.json
+survey_form/node_modules
+survey_form/package-lock.json
+survey_form/package.json
