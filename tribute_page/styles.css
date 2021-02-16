@@ -57,7 +57,7 @@ section {
 }
 section h2 div figure img {
     height: auto;
-    width: fit-content;
+    width: 100%;
     max-width: 800px;
     align-self: center;
     justify-self: center;
