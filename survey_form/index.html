@@ -4,50 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <div id="heading-one" class="flex-panel">
-                <h1 id="title">Survey about surveys</h1>
+                <h1 id="title">a survey about completing surveys</h1>
             </div>
             <div id="paragraph" class="flex-panel">
                 <p id="description">In the survey bellow we will be asking a few questoins about the amount of surveys people usualy complete in any given month and the reasons for doing so.</p>
             </div>
                 <form id="survey-form">
                     <div id="personal-details" class="flex-panel">
-                        <label for="name">Please let us know your name.</label><br/>
-                        <input type="text" requred="true" placeholder="Your Name" id="name" /><br/>
-                        <label for="email">Please enter an e-mail address so we can share our survey results with you.</label><br/>
-                        <input type="email" requred="true" placeholder="Your Email" id="email" />
+                        <div class="panel-content">
+                            <label for="name">Please let us know your name.</label><br/>
+                            <input type="text" requred="true" placeholder="Your Name" id="name" /><br/>
+                            <label for="email">Please enter an e-mail address so we can share our survey results with you.</label><br/>
+                            <input type="email" requred="true" placeholder="Your Email" id="email" />
+                        </div> 
                     </div>
                     <div id="main-survey" class="flex-panel">
-                        <label for="number">On average, how many surveys (an estimate is also fine) do you usualy complete in one month?</label><br/>
-                        <input type="number" requred="true" min="0" max="999" placeholder="Average Number of Surveys" id="number" /><br/>
-                        <label for="dropdown">If you think on how you complete the majority of your surveys, you would say...</label><br/>
-                        <select id="dropdown">
-                            <option value="social">...mostly via social media.</option>
-                            <option value="professional">...mostly as part of my job.</option>
-                            <option value="census">...mostly via census participation.</option>
-                            <option value="all-of-the-above">All of the above, equaliy.</option>
-                        </select><br/>
-                        <p>When are you more likely to complete a survey?</p>
-                        <div style="text-align: left;">
-                            <input type="checkbox" name="interests" value="fun" id="interest1" />
-                            <label for="interest1">When it's for fun</label><br/>
-                            <input type="checkbox" name="interests" value="statistics" id="interest2" />
-                            <label for="interest1">When it helps complete important surveys about the population</label><br/>
-                            <input type="checkbox" name="interests" value="feedback" id="interest3" />
-                            <label for="interest1">When it provides useful feedback to the developer</label><br/>
-                            <input type="checkbox" name="interests" value="personalisation" id="interest4" />
-                            <label for="interest1">WHen it allows me to get a more personilised user experience</label>
+                        <div class="panel-content">
+                            <label for="number">On average, how many surveys (an estimate is also fine) do you usualy complete in one month?</label><br/>
+                            <input type="number" requred="true" min="0" max="999" placeholder="Average Number of Surveys" id="number" /><br/>
+                            <label for="dropdown">If you think on how you complete the majority of your surveys, you would say...</label><br/>
+                            <select id="dropdown">
+                                <option value="social">...mostly via social media.</option>
+                                <option value="professional">...mostly as part of my job.</option>
+                                <option value="census">...mostly via census participation.</option>
+                                <option value="all-of-the-above">All of the above, equaliy.</option>
+                            </select><br/>
+                            <p>When are you more likely to complete a survey?</p>
+                            <div>
+                                <input type="checkbox" name="interests" value="fun" id="interest1" />
+                                <label for="interest1">When it's for fun</label><br/>
+                                <input type="checkbox" name="interests" value="statistics" id="interest2" />
+                                <label for="interest1">When it helps complete important surveys about the population</label><br/>
+                                <input type="checkbox" name="interests" value="feedback" id="interest3" />
+                                <label for="interest1">When it provides useful feedback to the developer</label><br/>
+                                <input type="checkbox" name="interests" value="personalisation" id="interest4" />
+                                <label for="interest1">When it allows me to get a more personilised user experience</label>
+                            </div>
                         </div>
                     </div>
                     <div id="other-comments" class="flex-panel">
-                        <label for="comments">Would you like to tell us anything else?</label><br/>
-                        <textarea id="comments" name="comments" maxlength="300" rows="10" cols="30" placeholder="Please keep your comments to a maximum length of 300 charachters."></textarea>
+                        <div class="panel-content">
+                            <label for="comments">Would you like to tell us anything else?</label><br/>
+                            <textarea id="comments" name="comments" maxlength="300" rows="10" cols="30" placeholder="Please keep your comments to a maximum length of 300 charachters."></textarea>
+                        </div>
                     </div>
                     <div id="submit-button" class="flex-panel">
-                        <input type="submit" id="submit" />
+                        <input type="submit" id="submit" value="DONE!"/>
                     </div>
                 </form>
             </div>
