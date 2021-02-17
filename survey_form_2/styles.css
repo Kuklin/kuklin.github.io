@@ -1,0 +1,70 @@
+body {
+    background: #982f41;
+    font-family: 'Nunito', sans-serif;
+}
+header {
+    background: #b5cc6f;
+}
+main,
+header,
+footer {
+    margin: 0 auto 10px auto;
+    border: 7px dotted black;
+    border-radius: 2%;
+    padding: 1%;
+}
+h1,
+p {
+    text-align: center;
+}
+h1 {
+    font-size: 100pt;
+}
+p {
+    font-size: 18pt;
+}
+label {
+    margin-right: 10px;
+    text-align: right;
+    font-size: 14pt;
+}
+form {
+    display: grid;
+    row-gap: 10px;
+}
+/* general styling for main element goes first */
+@media (min-width: 760px) {
+    main,
+    header,
+    footer {
+        width: 50%;
+    }
+    form {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+/* device specific styling goes second */
+@media (max-width: 759px){
+    main,
+    header,
+    footer {
+        width: 90%;
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+fieldset {
+    border: 2px dotted black;
+    border-radius: 2%;
+}
+input,
+textarea,
+select {
+    border: 4px solid black;
+    font-size: 12pt;
+}
+textarea {
+    width: 99%;
+    height: 200px;
+}
