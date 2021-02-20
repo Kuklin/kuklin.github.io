@@ -1,0 +1,39 @@
+body {
+    background: #373534;
+    width: 100%;
+}
+header {
+    background: #e18bd8;
+}
+main {
+    background: #ba2498;
+}
+footer {
+    background: #701e5e;
+}
+nav {
+    width: 76%;
+    margin: 0 auto;
+    padding: 2%;
+    position: absolute;
+    top: 0px;
+    height: fit-content;
+    background: #eae9e6;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+nav > a {
+    color: #373534;
+}
+nav > a:hover ~ nav {
+    background: #ba2498;
+    color: #eae9e6;
+}
+@media (min-width: 760px) {
+    header,
+    main,
+    footer {
+        width: 80%;
+        margin: 0 auto;
+    }    
+}

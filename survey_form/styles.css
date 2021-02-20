@@ -119,6 +119,7 @@ a {
     background-position: center;
     cursor: pointer;
     display: inline-block;
+    font-size: 0px;
 }
 .twitter {
     background-image: url(twitter.png);
@@ -161,6 +162,5 @@ a {
     }
     label {
         text-align: left;
-    }
     }
 }
