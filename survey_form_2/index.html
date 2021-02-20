@@ -1,74 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="styles.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1 id="title">Can we have a moment of your time?</h1>
-        </header>
-
-        <main>
-            <p id="paragraph">Have you ever completed a survey?<br/>Do you like being asked questions?<br/>Let us know and take a survey about surveys!</p>
-            <form>
-                <label for="name">Your Name</label>
-                <input id="name" type="text" required="true" placeholder="Your First, Middle and Last Names" />
-
-                <label for="email">Your Email</label>
-                <input id="email" type="email" required="true" placeholder="Your official, blue-check-mark Email" />
-
-                <label for="number">Average monthly surveys completed?</label>
-                <input id="number" type="number" required="true" min="1" max="9000" placeholder="Number between 1 and 9000" />
-
-                <label for="dropdown">Common place to take surveys?</label>
-                <select id="dropdown">
-                    <option value="" disabled selected>Select your option</option>
-                    <option value="social">on social media</option>
-                    <option value="professional">at place of gainful employment</option>
-                    <option value="census">at a government census and polling station</option>
-                    <option value="all-of-the-above">All of the above, equaliy.</option>
-                </select>
-
-                <span></span>
-                <fieldset id="checkboxes">
-                    <legend><label for="checkboxes">When will you complete a survey?</label></legend>
-                    <input type="checkbox" name="interests" value="fun" id="interest1" />
-                    <label for="interest1">When it's fun</label>
-                    <input type="checkbox" name="interests" value="statistics" id="interest2" />
-                    <label for="interest1">When it's important</label>
-                    <input type="checkbox" name="interests" value="feedback" id="interest3" />
-                    <label for="interest1">To give feedback</label>
-                    <input type="checkbox" name="interests" value="personalisation" id="interest4" />
-                    <label for="interest1">When it allows me to get a more personilised user experience</label>
-                </fieldset>
-
-                <span></span>
-                <fieldset id="radiobuttons">
-                    <legend><label for="radiobuttons">What is your favourite medium to complete a survey on?</label></legend>
-                    <input type="radio" name="format" value="paper" id="format1" />
-                    <label for="format1">Paper</label>
-                    <input type="radio" name="format" value="phone" id="format2" />
-                    <label for="format2">Phone</label>
-                    <input type="radio" name="format" value="in-person" id="format3" />
-                    <label for="format3">In-person</label>
-                    <input type="radio" name="format" value="shouting" id="format4" />
-                    <label for="format4">Loud Shouting</label>
-                </fieldset>
-
-                <span></span>
-                <fieldset>
-                    <legend><label for="comments">Would you like to tell us anything else?</label></legend>
-                    <textarea id="comments" name="comments" maxlength="300" placeholder="Please keep your comments to a maximum length of 300 charachters."></textarea>
-                </fieldset>
-
-            </form>
-        </main>
-        <footer>
-            <p class="foot">Footer goes here!</p>
-        </footer>
+        <div class="container">
+            <div id="heading-one" class="flex-panel">
+                <h1 id="title">a survey about completing surveys</h1>
+            </div>
+            <div id="paragraph" class="flex-panel">
+                <p id="description">In the survey bellow we will be asking a few questoins about the amount of surveys people usualy complete in any given month and the reasons for doing so.</p>
+            </div>
+                <form id="survey-form">
+                    <div id="personal-details" class="flex-panel">
+                        <div class="panel-content">
+                            <label for="name">Please let us know your name.</label><br/>
+                            <input type="text" requred="true" placeholder="Your Name" id="name" /><br/>
+                            <label for="email">Please enter an e-mail address so we can share our survey results with you.</label><br/>
+                            <input type="email" requred="true" placeholder="Your Email" id="email" />
+                        </div> 
+                    </div>
+                    <div id="main-survey" class="flex-panel">
+                        <div class="panel-content">
+                            <label for="number">On average, how many surveys (an estimate is also fine) do you usualy complete in one month?</label><br/>
+                            <input type="number" requred="true" min="0" max="999" placeholder="Average Number of Surveys" id="number" /><br/>
+                            <label for="dropdown">If you think on how you complete the majority of your surveys, you would say...</label><br/>
+                            <select id="dropdown">
+                                <option value="social">...mostly via social media.</option>
+                                <option value="professional">...mostly as part of my job.</option>
+                                <option value="census">...mostly via census participation.</option>
+                                <option value="all-of-the-above">All of the above, equaliy.</option>
+                            </select><br/>
+                            <p>When are you more likely to complete a survey?</p>
+                            <div>
+                                <input type="checkbox" name="interests" value="fun" id="interest1" />
+                                <label for="interest1">When it's for fun</label><br/>
+                                <input type="checkbox" name="interests" value="statistics" id="interest2" />
+                                <label for="interest1">When it helps complete important surveys about the population</label><br/>
+                                <input type="checkbox" name="interests" value="feedback" id="interest3" />
+                                <label for="interest1">When it provides useful feedback to the developer</label><br/>
+                                <input type="checkbox" name="interests" value="personalisation" id="interest4" />
+                                <label for="interest1">When it allows me to get a more personilised user experience</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="other-comments" class="flex-panel">
+                        <div class="panel-content">
+                            <label for="comments">Would you like to tell us anything else?</label><br/>
+                            <textarea id="comments" name="comments" maxlength="300" rows="10" cols="30" placeholder="Please keep your comments to a maximum length of 300 charachters."></textarea>
+                        </div>
+                    </div>
+                    <div id="submit-button" class="flex-panel">
+                        <input type="submit" id="submit" value="DONE!"/>
+                    </div>
+                </form>
+            </div>
     </body>
 </html>

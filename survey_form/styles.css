@@ -1,117 +1,166 @@
-* {
-    margin: 0;
-}
-html,
-body,
-.container {
-    height: 100%;
-    width: 100%;
-}
-.container,
-form {
-    display: flex;
-    flex-flow: wrap column;
-    align-content: flex-start;
-}
-form {
-    height: 100%;
-    min-height: fit-content;
-    width: 66.6%;
-}
-.container {
-    background: chocolate;
-}
-.flex-panel {
-    width: 33.3%;
-    color: black;
-    height: fit-content;
-    min-height: 50%;
-    font-family: 'Nunito', sans-serif;
-}
-form > .flex-panel {
-    width: 50%;
-}
-@media (max-width: 768px) {
-    .container,
-    form {
-        display: flex;
-        flex-flow: wrap row;
-        align-content: flex-start;
-        width: 100%;
-        height: fit-content;
-        min-height: 100%;
-    }
-    .flex-panel,
-    .container .flex-panel {
-        width: 50%;
-        min-width: fit-content;
-        min-height: 50%;
-    }
- 
-}
-@media (max-width: 520px) {
-    .container,
-    form {
-        display: flex;
-        flex-flow: nowrap column;
-        align-content: flex-start;
-        width: 100%;
-        height: 100%;
-    }
-    .flex-panel,
-    .container .flex-panel {
-        min-width: 100%;
-        color: black;
-        min-height: fit-content;
-    }
-}
-h1 {
-    width: 80%;
-    height: 80%;
-    margin: 10% 10% 0 10%;
-    font-size: 40pt;
-}
-#paragraph > p {
-    width: 80%;
-    height: 80%;
-    margin: 10% 10% 0 10%;
-    font-size: 20pt;
-}
-.panel-content {
-    width: 80%;
-    height: 80%;
-    margin: 10% 10% 0 10%;
-    justify-content: center;
-}
-input[type="submit"] {
-    width: 80%;
-    height: 80%;
-    margin: 10% 10% 0 10%;
-    background: sandybrown;
-    border-radius: 5%;
-    border: none;
-    font-family: 'Nunito', sans-serif;
-    font-size: 50pt;
-}
-input[type="submit"]:hover {
-    cursor: pointer;
-    background: sienna;
-}
-#heading-one {
+body {
     background: #982f41;
+    font-family: 'Nunito', sans-serif;
 }
-#paragraph {
+header {
     background: #b5cc6f;
+    margin: 20px auto 30px auto;
 }
-#personal-details {
-    background: #96ac6d;
-}
-#main-survey {
+main {
     background: #52736a;
 }
-#other-comments {
-    background: #566172;
+footer {
+    background: #96ac6d;
+    text-align: center;
 }
-#submit-button {
-    background: #982f41;
+main,
+header,
+footer {
+    border: 15px double black;
+    border-radius: 30px;
+    padding: 1%;
+    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+main,
+footer {
+    margin: 0 auto 30px auto;
+}
+h1,
+p,
+a {
+    text-align: center;
+}
+h1 {
+    font-size: 4.5rem;
+}
+p,
+input[type="submit"] {
+    font-size: 18pt;
+}
+footer > p {
+    font-size: 12pt;
+}
+input[type="submit"] {
+    width: 50%;
+    justify-self: center;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+input[type="submit"]:hover {
+    background: chocolate;
+}
+/* Bellow styles the selected checkbox and radio buttons. */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    color: black;
+    filter: invert(100%) brightness(0%);
+    -webkit-transform: rotate(20deg) scale(140%);
+    -moz-transform: rotate(20deg) scale(140%);
+    -o-transform: rotate(20deg) scale(140%);
+    -ms-transform: rotate(20deg) scale(140%);
+    transform: rotate(20deg) scale(140%);
+}
+label {
+    margin-right: 10px;
+    text-align: right;
+    font-size: 1.3rem;
+    align-self: center;
+}
+form {
+    display: grid;
+    row-gap: 10px;
+}
+fieldset {
+    border: 4px dotted black;
+    border-radius: 2%;
+    display: block;
+}
+input,
+textarea,
+select {
+    border: 4px solid black;
+    font-size: 1.3rem;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+textarea {
+    width: 99%;
+    height: 200px;
+}
+/* Code bellow removes those tiny little arrows in the number field. */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+select:hover {
+    cursor: pointer;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+a {
+    color: black;
+}
+.github,
+.twitter {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    display: inline-block;
+}
+.twitter {
+    background-image: url(twitter.png);
+}
+.github {
+    background-image: url(git.png);
+}
+/* general styling for main element goes first */
+@media (min-width: 760px) {
+    main,
+    header,
+    footer {
+        width: 50%;
+        min-width: 700px;
+    }
+    h1 {
+        font-size: 9rem;
+    }    
+    form {
+        grid-template-columns: 2fr 3fr;
+    }
+    input[type="submit"],
+    fieldset {
+    grid-area: span 1 / span 2;
+    }
+}
+/* device specific styling goes second */
+@media (max-width: 759px){
+    main,
+    header,
+    footer {
+        width: 90%;
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+    input[type="submit"],
+    fieldset {
+    grid-area: span 1 / span 1;
+    }
+    label {
+        text-align: left;
+    }
+    }
 }
