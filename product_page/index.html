@@ -4,50 +4,65 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gudea&family=Hind+Madurai&family=Libre+Franklin:ital,wght@1,800&display=swap" rel="stylesheet">    </head>
     <body>
         <header id="header">
             <nav id="nav-bar">
-                <a href="#" class="nav-link">Link 1</a>
-                <a href="#" class="nav-link">Link 2</a>
-                <a href="#" class="nav-link">Link 3</a>
-                <a href="#" class="nav-link">Link 4</a>
-                <a href="#" class="nav-link">Link 5</a>
+                <a href="#strings" class="nav-link">Our Product</a>
+                <a href="#demonstration" class="nav-link">Hear Our Strings</a>
+                <a href="#product" class="nav-link">Models</a>
+                <a href="#newsletter" class="nav-link">Get You Sample</a>
+                <a href="#about" class="nav-link">About Us</a>
             </nav>
-            <div class="branding">
-                <img src="" alt="" />
-                <h1></h1>
-                <p></p>
+            <h1 class="brandname">PINK STRINGS</h1>
+            <div class="branding" id="strings">
+                <img src="strings.jpg" alt="A set of electric bass strings." />
+                <div>
+                    <h1>Got Strings?</h1>
+                    <p>YES! It is our mission to provide you with all the strings you need! Our extended expertise </p>
+                    <p>We have all the bass strings you need! While our standard string set covers most bassists needs, we also offer single strings and custom-made strings.
+                    </p>
+                </div>
             </div>
         </header>
         <main>
-            <div class="product">
-                <img src="" alt="" />
-                <h2></h2>
-                <p></p>
+            <div class="demo" id="demonstration">
+                <h2>See our strings in action!</h2>
+                <video controls="controls" width="100%" height="auto" name="Samle Video" src="Sample_Video.mov">Sorry, your browser doesn*t support embedded videos.</video>
+            </div>
+            <div class="product" id="product">
+                <img src="single.jpg" alt="A single bass string example." />
+                <div>
+                    <h2>Single String</h2>
+                    <p>Did you break just ONE string? Do you want to change just ONE string, WITHOUT buying a whole new set? We've got you covered! Here you can buy only the strings that you need.</p>
+                    <a href="#" target="_blank" class="shop-link">VIEW IN OUR SHOP</a>
+                </div>
             </div>
             <div class="product">
-                <img src="" alt="" />
-                <h2></h2>
-                <p></p>
+                <img src="custom.jpg" alt="A customised set of electric bass strings." />
+                <div>
+                    <h2>Custom Set</h2>
+                    <p>Tailored to fit YOUR style! Do you play a 4-, 5-, or 6 string bass? Do you like your top strings heavier then your bottom strings? Want play in a tuning other then EADG? Create your own customised string set!</p>
+                    <a href="#" target="_blank" class="shop-link">VIEW IN OUR SHOP</a>
+                </div>
             </div>
             <div class="product">
-                <img src="" alt="" />
-                <h2></h2>
-                <p></p>
+                <img src="upright.jpg" alt="A set of strungs for the upright bass." />
+                <div>
+                    <h2>Just Right for Upright!</h2>
+                    <p>We love ALL THINGS BASS! Which is why we have developed the universal upright bass string. Our double bass strings provide the perfect balance between classical tradition and new age jazz.</p>
+                    <a href="#" target="_blank" class="shop-link">VIEW IN OUR SHOP</a>
+                </div>
             </div>
-            <div class="product">
-                <img src="" alt="" />
-                <h2></h2>
-                <p></p>
-            </div>
-            <form action="submit" method="get">
+            <form action="submit" method="get" class="newsletter" id="newsletter">
+                <h3>Would you like to stay up-to-date with you promotions, innovations and exclusive sales?<br/>Sign up for our monthly newsletter!</h3>
                 <input type="email" required placeholder="Your Email Adress" />
                 <input type="submit" id="submit">
             </form>
         </main>
         <footer>
-            <p class="foot">This survey form was created for code challenge #2 of the responsive webdesign certification at <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.org</a></p>
+            <p class="foot" id="about">This sample product page was created for code challenge #2 of the responsive webdesign certification at <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.org</a></p>
             <a href="https://twitter.com/ArtLearns" target="_blank" class="twitter">A link to creator Twitter page.</a>
             <a href="https://github.com/Kuklin/kuklin.github.io" target="_blank" class="github">A link to creators GitHub page.</a>
         </footer>
