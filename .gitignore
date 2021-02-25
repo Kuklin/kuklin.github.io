@@ -8,3 +8,6 @@ survey_form_2/
 product_page/node_modules
 product_page/package.json
 product_page/package-lock.json
+tech_documentation/node_modules
+tech_documentation/package.json
+tech_documentation/package-lock.json
