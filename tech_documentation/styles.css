@@ -8,6 +8,7 @@ body {
     width: 100%;
     height: fit-content;
     display: grid;
+    grid-template-areas: "nav content";
     grid-template-columns: 1fr 3fr;
     grid-auto-rows: auto;
     grid-gap: 15px;
@@ -18,12 +19,13 @@ footer {
     background: lightgreen;
 }
 nav {
-    position: fixed;
-    top: 0;
-    width: 250px;
-    height: 100%;
+    position: sticky;
+    grid-area: nav;
+    top: 0px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    grid-column: 1;
 }
 nav > header,
 nav > a {
@@ -40,7 +42,7 @@ nav > header > h2,
     background: rgba(0,0,0,0.1);
 }
 main {
-    grid-area: 1 / 2 / 1 / 2;
+    grid-area: content;
 }
 section {
     margin: 50px 20px 20px;
