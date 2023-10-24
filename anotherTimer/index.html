@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head lang="en-GB">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="sitDownHandler.js" type="text/javascript" defer></script>
+    <title>Sit Down!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="functional-unit-container">
+            <h2 class="tool-title">Sit down</h2>
+            <h3 class="t-counter-label">Sitting since last stand-up:</h3>
+            <p class="t-counter" id="lap-counter">--:--:--</p>
+            <h3 class="t-counter-label">Total sitting this session:</h3>
+            <p class="t-counter" id="total-counter">--:--:--</p>
+            <h3 class="t-counter-label">Alarm interval:</h3>
+            <form id="timer-selector" class="alarm-btn-field">
+                <input type="radio" id="15min" name="timer-select" value="15" checked>
+                <label class="alarm-select" for="15min">15'</label>
+                <input type="radio" id="30min" name="timer-select" value="30">
+                <label class="alarm-select" for="30min">30'</label>
+                <input type="radio" id="60min" name="timer-select" value="60">
+                <label class="alarm-select" for="60min">60'</label>
+            </form>
+            <div class="control-btn-field">
+                <button class="control-btn" id="start-session">Start sitting</button>
+                <button class="control-btn" id="pause-session" hidden>Stand up</button>
+                <button class="control-btn" id="resume-session" hidden>Sit down</button>
+                <button class="control-btn" id="end-session" hidden>End session</button>
+            </div>
+        </div>
+    </div>
+</body>
